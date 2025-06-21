@@ -1,19 +1,19 @@
-C++ code for a proof-of-concept, Raspberry Pi 5 based robot car (using the following controllers, and sensors: PCA9685, SG90, VL53L0X, LM2596, L298N, LSM6DSOX, LIS3MDL)
+This is C++ code for a proof-of-concept, Raspberry Pi 5 based robot car (using the following controllers, and sensors: PCA9685, SG90, VL53L0X, LM2596, L298N, LSM6DSOX, LIS3MDL)
 
 The capabilities of the car:
-- TT-motor driving (using LM2596 voltage regualators and L298N motor drivers)
+- TT-motor driving (using LM2596 voltage regulators and L298N motor drivers)
 - motor driver and servo control using the PCA9685 PWM Servo Motor Driver
 - object avoidance (using multiple VL53L0X sensors)
 - floor sensing (using a single VL53L0X sensor)
-- text-to-speech (talking)
+- text-to-speech (talking) using espeak-ng
 - speech-to-text (speech recognition through Google's speech-to-text API)
-- not too succesful turning angle detection attempt using the LSM6DSOX accelerometer and gyroscope and the LIS3MDL compass.
+- not too succesful turning-angle-detection attempt using the LSM6DSOX accelerometer and gyroscope and the LIS3MDL compass.
 
 Details can be found at: https://www.youtube.com/watch?v=5kd9n4RXpWY
 
 Use VS Code to edit, use CMAKE to compile.
 
-Rapsberry PI 5 GPIO pin assignments are in the main.cpp file
+Rapsberry PI 5 GPIO pin assignments are in the main.cpp file.
 
 PCA9685 pin assignments in the src/car.cpp file
 
@@ -28,3 +28,6 @@ This code depends on the following libraries:
 - fvad: for Voice Activity Detection: https://github.com/dpirch/libfvad
 - sndfile: used by fvad for audio file read/write. It is part of the libsndfile1 and libsndfile-dev packages
 - googlespeechtotext: my own library encapsulating google's speech-to-text API. When we compile google's speech-to-text library, the loader takes a long time, therefore, I separated it out into my own library to save compile time.
+
+If you have questions/comments, send email to: laszlo.zeke@gmail.com
+  
