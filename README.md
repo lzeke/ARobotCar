@@ -27,7 +27,11 @@ This code depends on the following libraries:
 - miniaudio.h: for speech capture: https://github.com/mackron/miniaudio
 - fvad: for Voice Activity Detection: https://github.com/dpirch/libfvad
 - sndfile: used by fvad for audio file read/write. It is part of the libsndfile1 and libsndfile-dev packages
-- googlespeechtotext: my own library encapsulating google's speech-to-text API. When we compile google's speech-to-text library, the loader takes a long time, therefore, I separated it out into my own library to save compile time.
+- googlespeechtotext: my own library encapsulating google's speech-to-text API. When we compile google's speech-to-text library, the loader takes a long time, therefore, I separated it out into my own library to save compile time. 
+
+I had to make modifications to the tof library (https://github.com/bitbank2/VL53L0X), the modified tof.c and tof.h files are under the tof_mofication directory.
+
+The reason for the "pwm-pi5-overlay.dst" file is explained in the src/pwm.cpp file.
 
 If you have questions/comments, send email to: laszlo.zeke@gmail.com
   
